@@ -1,4 +1,4 @@
-.section-4-mobile {
+.crm-mobile {
   position: relative;
   height: 60vh;
   background: url("../../../assets/images/Banner.2.jpg") no-repeat center center;
@@ -8,16 +8,16 @@
 }
 
 /* 🔹 Fundo mais escuro */
-.section-4-mobile::before {
+.crm-mobile::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 1;
 }
 
 /* 🔹 Conteúdo */
-.section-4-mobile .container {
+.crm-mobile .container {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -38,13 +38,13 @@
 }
 
 /* 🔹 Ícones */
-.social-icons-mobile {
+/* .social-icons-mobile-crm {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   z-index: 2;
-}
+} */
 
 .icon-mobile {
   display: flex;
@@ -67,7 +67,7 @@
 
 /* 🔹 Ajustes extras */
 @media (max-width: 576px) {
-  .section4-title-mobile {
+  .crm-title-mobile {
     font-size: 1.6rem;
   }
 

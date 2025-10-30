@@ -7,7 +7,8 @@ import logoOutlineLote from "../../../assets/images/outline.svg";
 
 export default function HeroMobile() {
   return (
-    <section className="banner-mobile position-relative vh-100 overflow-hidden">
+    <section className="banner-mobile position-relative vh-100 overflow-hidden"
+    id="hero">
       <div
         id="bannerCarouselMobile"
         className="carousel slide h-100"

@@ -43,6 +43,7 @@ export default function Comments() {
         background: "linear-gradient(15deg, #1d1844ff 25%, #2a1d9d, #0956bbff)",
         height: "auto",
       }}
+      id="comments"
     >
       <div className="container w-100 h-75">
         <h2 className="fw-bold fs-2 mb-5">

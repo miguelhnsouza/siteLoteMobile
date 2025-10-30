@@ -78,6 +78,37 @@
   background-color: rgba(255, 255, 255, 0.25);
   color: #fff;
 }
+.video-thumb-mobile {
+  position: relative;
+  border-radius: 1rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.play-icon-mobile-link {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.play-icon-mobile-link:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.play-icon-mobile {
+  font-size: 1.5rem;
+  color: #fff;
+}
 
 /* --- Ajustes para telas pequenas --- */
 @media (max-width: 768px) {

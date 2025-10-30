@@ -21,7 +21,7 @@ export default function AwsMobile() {
   ];
 
   return (
-    <section className="aws-section-mobile py-5 text-center">
+  <section className="aws-section-mobile py-5 text-center" id="aws">''
       <div className="container">
         <h2 className="aws-title-mobile mb-5">
           <span className="text-highlight-mobile">Tecnologia</span> segura, estável e

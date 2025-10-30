@@ -57,7 +57,8 @@ export default function Integrations() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="integrations-wrapper">
+    <section className="integrations-wrapper"
+    id="integrations">
       <div className="section-integrations row align-items-center">
         <div className="col-md-5 d-flex flex-column align-items-end">
           <div className="left-box">
@@ -65,21 +66,28 @@ export default function Integrations() {
               <span>Integrações que otimizam</span> seu loteamento de forma
               inteligente
             </h2>
-            <button className="cta fs-4">Fale com um consultor</button>
+            <a href="#formulario" className="text-decoration-none m-0">
+              <button className="cta fs-4">Fale com um consultor</button>
+            </a>
           </div>
 
           <p className="desc">
             Conecte todos os pontos do seu negócio em um só lugar. Com
             integrações diretas a bancos, redes sociais, automações contábeis e
-            Google Maps, nossa plataforma transforma sua torina em uma experiencia agil, segura e totalmente integrada.
+            Google Maps, nossa plataforma transforma sua torina em uma
+            experiencia agil, segura e totalmente integrada.
           </p>
         </div>
 
         <div className="col-md-6 h-100">
-          <div className="p-5 rounded-5 border border-2 border-primary d-flex align-items-center justify-content-end"
-          style={{width: "75%", height: "85%"}}>
-            <div className="right-box pr-5"
-            style={{width: "80%", height: "80%"}}>
+          <div
+            className="p-5 rounded-5 border border-2 border-primary d-flex align-items-center justify-content-end"
+            style={{ width: "75%", height: "85%" }}
+          >
+            <div
+              className="right-box pr-5"
+              style={{ width: "80%", height: "80%" }}
+            >
               <div className="list">
                 {items.map((item) => (
                   <div key={item.id} className="accordion-item">
@@ -88,10 +96,16 @@ export default function Integrations() {
                       onClick={() => setOpen(open === item.id ? null : item.id)}
                     >
                       <div className="icon-title">
-                        <img src={item.icon} alt={item.title} className="rounded-2" />
+                        <img
+                          src={item.icon}
+                          alt={item.title}
+                          className="rounded-2"
+                        />
                         <span className="fs-3">{item.title}</span>
                       </div>
-                      <span className="d-flex align-items-center">{open === item.id ? "×" : "+"}</span>
+                      <span className="d-flex align-items-center">
+                        {open === item.id ? "×" : "+"}
+                      </span>
                     </div>
 
                     {open === item.id && (

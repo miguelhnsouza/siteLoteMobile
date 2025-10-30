@@ -36,7 +36,8 @@ export default function CommentsMobile() {
   ];
 
   return (
-    <section className="comments-carousel-section-mobile text-white px-4 py-5">
+    <section className="comments-carousel-section-mobile text-white px-4 py-5"
+    id="comments">
       <h2 className="carousel-title-mobile fw-bold text-center">
         O que os nossos clientes <br />
         <span>falam sobre nós</span>

@@ -21,7 +21,7 @@ export default function Aws() {
   ];
 
   return (
-    <section className="aws-section py-5 text-center">
+    <section className="aws-section py-5 text-center" id="aws">
       <div className="container">
         <h2 className="aws-title mb-5">
           <span className="highlight">Tecnologia</span> segura, estável <br /> e

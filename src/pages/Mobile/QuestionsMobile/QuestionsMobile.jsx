@@ -62,7 +62,7 @@ const faqsMobile = [
 
 export default function QuestionsMobileOnly() {
   return (
-    <section className="faq-section-mobile container py-5">
+    <section className="faq-section-mobile container py-5" id="questions">
       <h1 className="text-center mb-4 fw-bold ">
         Perguntas
         <br />

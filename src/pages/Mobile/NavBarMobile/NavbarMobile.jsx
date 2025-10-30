@@ -47,32 +47,32 @@ export default function NavbarMobile() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#funcionalidades">
+              <a className="nav-link" href="#videos">
                 Funcionalidades
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#integracoes">
+              <a className="nav-link" href="#integrations">
                 Integrações
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#tecnologia">
+              <a className="nav-link" href="#aws">
                 Tecnologia
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#faq">
+              <a className="nav-link" href="#questions">
                 FAQ
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#depoimentos">
+              <a className="nav-link" href="#comments">
                 Depoimentos
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contatos">
+              <a className="nav-link" href="#contact">
                 Contatos
               </a>
             </li>

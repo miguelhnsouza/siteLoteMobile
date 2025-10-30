@@ -62,7 +62,7 @@ const faqs = [
 
 export default function Questions() {
   return (
-    <section className="container py-5 faq-section">
+    <section className="container py-5 faq-section" id="questions">
       <h1 className="fw-thin mb-4 text-center">Perguntas frequentes</h1>
       <div className="w-75 d-flex flex-column mx-auto">
         {/* MENU TABS */}

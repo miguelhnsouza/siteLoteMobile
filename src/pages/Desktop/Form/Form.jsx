@@ -4,7 +4,7 @@ import { FaUser, FaEnvelope, FaWhatsapp, FaClock } from "react-icons/fa";
 
 export default function Form() {
   return (
-    <section className="vh-auto p-5 bg-white d-flex align-items-center flex-row">
+    <section className="vh-auto p-5 bg-white d-flex align-items-center flex-row" id="formulario">
       <div className="col-md-5 h-100 p-4 d-flex justify-content-center align-items-center">
         <div className="w-auto h-75 text-start d-flex flex-column justify-content-center align-items-center">
           <h1

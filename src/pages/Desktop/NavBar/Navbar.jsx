@@ -15,7 +15,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar-header ${scrolled ? "scrolled" : ""} py-3`}>
+    <header className={`navbar-header ${scrolled ? "scrolled" : ""} py-3`}
+    id="header">
       <nav className="navbar navbar-expand-lg navbar-light container">
         {/* LOGO */}
         <a className="navbar-brand d-flex align-items-center" href="#">
@@ -47,32 +48,32 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#funcionalidades">
+              <a className="nav-link" href="#videos">
                 Funcionalidades
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#integracoes">
+              <a className="nav-link" href="#integrations">
                 Integrações
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#tecnologia">
+              <a className="nav-link" href="#aws">
                 Tecnologia
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#faq">
+              <a className="nav-link" href="#questions">
                 FAQ
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#depoimentos">
+              <a className="nav-link" href="#comments">
                 Depoimentos
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contatos">
+              <a className="nav-link" href="#contact">
                 Contatos
               </a>
             </li>
@@ -81,10 +82,10 @@ export default function Navbar() {
 
         {/* BOTÕES À DIREITA */}
         <div className="d-none d-lg-flex align-items-center ms-3 gap-2">
-          <a href="#" className="btn btn-primary px-4 py-1 rounded-pill">
+          <a href="https://admin.walletlote.app.br/" target="_blank" className="btn btn-primary px-4 py-1 rounded-pill">
             Login
           </a>
-          <a href="#" className="btn btn-dark px-4 py-1 rounded-pill">
+          <a href="#formulario" className="btn btn-dark px-4 py-1 rounded-pill">
             Compre
           </a>
         </div>

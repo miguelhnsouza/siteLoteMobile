@@ -57,17 +57,22 @@ export default function IntegrationsMobile() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section className="integrations-wrapper-mobile">
+    <section className="integrations-wrapper-mobile" id="integrations">
       {/* 🔹 Box azul superior */}
       <div className="right-box-mobile d-flex flex-column align-items-center">
         <div className="left-box-mobile px-4 pt-4 pb-5 position-relative">
           <h2 className="fs-1 fw-bold m-0">
-            <span>Integrações <br />que otimizam</span>
+            <span>
+              Integrações <br />
+              que otimizam
+            </span>
             <br /> seu loteamento de forma inteligente
           </h2>
 
           {/* Botão sobreposto */}
-          <button className="cta-mobile w-75">Fale com um consultor</button>
+          <a href="#formulario" className="text-decoration-none m-0">
+            <button className="cta-mobile w-75">Fale com um consultor</button>
+          </a>
         </div>
 
         {/* 🔹 Descrição abaixo */}

@@ -4,7 +4,8 @@ import { FaUser, FaEnvelope, FaWhatsapp, FaClock } from "react-icons/fa";
 
 export default function FormMobile() {
   return (
-    <section className="form-section-mobile d-flex flex-column align-items-center justify-content-center">
+    <section className="form-section-mobile d-flex flex-column align-items-center justify-content-center"
+    id="formulario">
       {/* Título */}
       <div className="form-title-mobile text-left">
         <h1 className="fw-bold">

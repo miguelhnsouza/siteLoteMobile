@@ -4,7 +4,7 @@ import "./banner3.css";
 
 export default function Banner3() {
   return (
-    <section className="banner3 position-relative overflow-hidden text-white">
+    <section className="banner3 position-relative overflow-hidden text-white" id="banner3">
       {/* Vídeo de fundo */}
       <video
         autoPlay
@@ -35,7 +35,7 @@ export default function Banner3() {
           {/* Coluna do botão */}
           <div className="col-md-6 d-flex justify-content-md-end justify-content-center mt-4 mt-md-0">
             <a
-              href="#"
+              href="#formulario"
               className="d-inline-flex align-items-center gap-2 px-5 py-3 rounded-5 border border-info text-white text-decoration-none hover-glow"
               style={{borderColor: "#00bcd4"}}
             >

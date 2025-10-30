@@ -6,7 +6,7 @@ import videoBanner1 from "../../../assets/images/videoBanner1.mp4";
 
 export default function Hero() {
   return (
-    <section className="banner vh-100 overflow-hidden position-relative">
+    <section className="banner vh-100 overflow-hidden position-relative" id="hero">
       <div
         id="bannerCarousel"
         className="carousel slide carousel-vertical h-100"

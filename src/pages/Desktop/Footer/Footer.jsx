@@ -6,7 +6,8 @@ import logoLote2 from "../../../assets/images/logoLoteBranco.png";
 export default function Footer() {
   return (
     <footer className="text-light px-3 py-5 d-flex align-items-center"
-    style={{backgroundColor: "#01233F", height: "auto"}}>
+    style={{backgroundColor: "#01233F", height: "auto"}}
+    id="footer">
       <div className="container w-100 h-auto">
         <div className="row gy-4 mb-1 d-flex justify-content-between h-100">
           {/* Coluna 1 - Logo e descrição */}

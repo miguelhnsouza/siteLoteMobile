@@ -5,7 +5,8 @@ import { FaWhatsapp, FaEnvelope, FaLocationDot} from "react-icons/fa6";
 
 export default function Contact() {
   return (
-    <section className="text-center">
+    <section className="text-center"
+    id="contact">
       {/* Topo escuro com título */}
       <div
         className="py-5 text-white text-center"
@@ -56,7 +57,7 @@ export default function Contact() {
           {/* Botão de ação */}
           <div className="d-flex justify-content-center">
             <a
-              href="#"
+              href="#formulario"
               className="btn btn-primary btn-agende-contact px-4 py-2 rounded-pill fw-semibold fs-4"
               style={{
                 
