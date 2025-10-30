@@ -1,0 +1,114 @@
+.section-integrations{
+ height: 85%;   
+}
+.integrations-wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden; /* impede scroll horizontal */
+}
+
+.left-box {
+  background: #001f3f;
+  color: #fff;
+  border-radius: 30px;
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-bottom: 0px;
+  padding-right: 60px;
+  width: 550px;
+  transform: translateX(25%);
+}
+
+.left-box h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  width: auto;
+}
+.left-box button {
+  transform: translateY(50%);
+}
+
+.left-box h2 span {
+  font-weight: bold;
+}
+
+.cta {
+  background: #00baf2;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.desc {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #949494;
+  width: 40%;
+  line-height: 1.5;
+  margin-top: 50px ;
+  transform: translateX(-10%);
+}
+
+.right-box {
+  width: 400px;
+  height: 450px;
+  overflow-y: auto;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  padding: 25px;
+}
+/* remove os botões (setinhas) da scrollbar */
+.right-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.right-box::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+/* Accordion */
+.accordion-item {
+  border-bottom: px solid #eee;
+  padding: 15px 0;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+  color: #001f3f;
+}
+
+.icon-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-title img {
+  width: 28px;
+  height: 28px;
+}
+
+.accordion-text {
+  padding: 10px 5px 5px 40px;
+  font-size: 13px;
+  color: #60666d;
+  line-height: 1.4;
+}

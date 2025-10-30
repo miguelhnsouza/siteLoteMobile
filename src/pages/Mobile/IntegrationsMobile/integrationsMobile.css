@@ -1,0 +1,140 @@
+.integrations-wrapper-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 50px 20px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafc;
+  gap: 30px;
+}
+
+/* 🔹 Box azul */
+.left-box-mobile {
+  background: #001f3f;
+  color: #fff;
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+
+.left-box-mobile h2 span {
+  color: #00baf2;
+}
+
+/* 🔹 Botão sobreposto */
+.cta-mobile {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00baf2;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-mobile:hover {
+  background: #009ad0;
+}
+
+/* 🔹 Descrição abaixo */
+.desc-mobile {
+  color: #707070;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 1.5;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 🔹 Box branco com borda */
+.right-box-mobile {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 25px;
+  border: 2px solid #00baf2;
+  padding: 10px;
+  /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); */
+}
+
+/* 🔹 Acordeões */
+.accordion-item-mobile {
+  border-bottom: 0px solid #eee;
+  padding: 12px 0;
+}
+
+.accordion-header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #001f3f;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.icon-title-mobile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-title-mobile img {
+  width: 26px;
+  height: 26px;
+}
+
+.title-text-mobile {
+  font-size: 1rem;
+}
+
+.toggle-mobile {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #00baf2;
+  font-weight: bold;
+}
+
+.accordion-text-mobile {
+  padding: 8px 5px 5px 40px;
+  font-size: 0.9rem;
+  color: #60666d;
+  line-height: 1.4;
+}
+
+/* 🔹 Scroll se a lista for longa */
+.list-mobile {
+  width: 80%;
+  overflow-y: auto;
+}
+
+.list-mobile::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list-mobile::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* 🔹 Responsivo extra */
+@media (max-width: 480px) {
+  .left-box-mobile h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-mobile {
+    font-size: 0.95rem;
+    padding: 10px 25px;
+  }
+}

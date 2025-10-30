@@ -1,0 +1,44 @@
+.btn-agende {
+  transform: translateY(50%);
+  /* transform: translateX(10%); */
+
+  background: linear-gradient(45deg, #06243c 0%,  #352c61 50%, #06243c 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover: inverte o degradê e adiciona sombra */
+.btn-agende2:hover {
+  background: linear-gradient(90deg, #0463df 0%,  #4881cc 50%, #0463df 100%);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+  scale: calc(1.02);
+}
+
+.btn-agende2 {
+  transform: translateY(-50%);
+  /* transform: translateX(10%); */
+  background: linear-gradient(90deg, #0573FF 0%,  #4881cc 50%, #0573FF 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container{
+  border: 1.5px solid #000;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}

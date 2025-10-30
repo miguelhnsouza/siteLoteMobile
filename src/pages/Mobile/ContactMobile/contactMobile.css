@@ -1,0 +1,7 @@
+.btn-agende-contact{
+    background: linear-gradient(90deg, #007bff, #0056d2);
+    border: none;
+}
+.btn-agende-contact:hover{
+    background: linear-gradient(90deg, #0463df 0%,  #4881cc 50%, #0463df 100%);;
+}

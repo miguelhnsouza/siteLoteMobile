@@ -1,0 +1,28 @@
+.banner3 {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner3 video {
+  object-fit: cover;
+}
+
+.hover-glow {
+  transition: 0.3s ease;
+}
+
+.button-banner3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    border-color: #00bcd4;
+}
+
+.hover-glow:hover {
+  background-color: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+  color: white !important;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+}

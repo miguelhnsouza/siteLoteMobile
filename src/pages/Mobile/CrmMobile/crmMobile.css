@@ -1,0 +1,83 @@
+.section-4-mobile {
+  position: relative;
+  height: 60vh;
+  background: url("../../../assets/images/Banner.2.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* 🔹 Fundo mais escuro */
+.section-4-mobile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/* 🔹 Conteúdo */
+.section-4-mobile .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* 🔹 Botão */
+.btn-outline-info-mobile {
+  border: 2px solid #00c8ff;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.btn-outline-info-mobile:hover {
+  background-color: #00c8ff;
+  color: #0b0c10;
+}
+
+/* 🔹 Ícones */
+.social-icons-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.icon-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.icon-mobile:hover {
+  background-color: transparent;
+  color: #00c8ff;
+  border: 1px solid #00c8ff;
+}
+
+/* 🔹 Ajustes extras */
+@media (max-width: 576px) {
+  .section4-title-mobile {
+    font-size: 1.6rem;
+  }
+
+  .btn-outline-info-mobile {
+    font-size: 1rem;
+  }
+
+  .icon-mobile {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

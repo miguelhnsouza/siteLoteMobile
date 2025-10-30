@@ -1,0 +1,101 @@
+.section-4-mobile {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vídeo */
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 110%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay */
+.section-4-mobile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* Conteúdo */
+.section-4-mobile .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Título */
+.section4-title-mobile {
+  line-height: 1.1;
+  font-size: 1.8rem;
+}
+
+/* Botão */
+.btn-outline-info-mobile {
+  border: 1px solid #00c8ff;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-outline-info-mobile:hover {
+  background-color: #00c8ff;
+  color: #0b0c10;
+}
+
+/* Ícones */
+.social-icons-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.icon-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+}
+
+.icon-mobile:hover {
+  background-color: transparent;
+  color: #00c8ff;
+  border-color: #00c8ff;
+}
+
+/* Responsivo mobile */
+@media (max-width: 576px) {
+  .section4-title-mobile {
+    font-size: 1.6rem;
+  }
+
+  .btn-outline-info-mobile {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .icon-mobile {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}

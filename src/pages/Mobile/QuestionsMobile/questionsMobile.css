@@ -1,0 +1,65 @@
+.faq-section-mobile {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Título */
+.faq-section-mobile h1 {
+  font-size: 2.4rem;
+  font-family: "Grift-Black", sans-serif;
+  line-height: 1;
+}
+
+/* Tabs */
+.faq-tabs-mobile .nav-link {
+  border-radius: 50px;
+  white-space: nowrap;
+  background: #f3f3f3;
+  color: #333;
+  font-size: 0.85rem;
+}
+
+.faq-tabs-mobile .nav-link.active {
+  background: #0b62ff;
+  color: #fff;
+}
+
+/* Accordion */
+.accordion-item-mobile {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Botão fechado */
+.accordion-button-mobile.collapsed {
+  background: #fff;
+  color: #555;
+  
+}
+
+/* Botão aberto */
+.accordion-button-mobile:not(.collapsed) {
+  background: #032a4f;
+  border-radius: 50px;
+  color: #fff;
+}
+
+/* Remove sombras padrão */
+.accordion-button-mobile,
+.accordion-button-mobile:focus {
+  box-shadow: none !important;
+  border: none;
+}
+
+/* Conteúdo interno */
+.accordion-body-mobile {
+  font-size: 0.9rem;
+  background: #fafafa;
+}
+
+/* Hitbox maior no mobile */
+.accordion-button-mobile {
+  padding: 14px;
+  font-size: 0.92rem;
+}
