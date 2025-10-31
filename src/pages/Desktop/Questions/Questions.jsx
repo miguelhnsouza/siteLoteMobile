@@ -12,19 +12,19 @@ const faqs = [
       },
       {
         q: "O sistema é online?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        a: "Sim!",
       },
       {
         q: "O sistema pode ser usado em projetos novos ou em andamento?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        a: "Sim! Você pode utilizar a Lote Mobile em qualquer momento da trajetória do seu empreendimento",
       },
       {
         q: "Posso acompanhar o desempenho da minha equipe de vendas?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        a: "Sim! Você consegue acompanhar através módulos e relatórios especiais para ter o controle da sua equipe em suas mãos!",
       },
       {
         q: "A Lote Mobile possui aplicativo?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        a: "Sim! Temos aplicativo para todos os usuários do sistema!",
       },
     ],
   },
@@ -34,7 +34,7 @@ const faqs = [
     perguntas: [
       {
         q: "Vocês oferecem treinamento?",
-        a: "Sim, acompanhamos o cliente durante a implementação.",
+        a: "Sim. Durante a implementação, fornecemos treinamentos completos e suporte dedicado para garantir o melhor aproveitamento do sistema. Sempre que surgirem dúvidas, nossa equipe estará pronta para ajudar.",
       },
     ],
   },
@@ -44,7 +44,7 @@ const faqs = [
     perguntas: [
       {
         q: "Quais os planos disponíveis?",
-        a: "Mensal e anual com benefícios escaláveis.",
+        a: "Temos diversos planos e disponibilizamos também contratação de módulos especiais! Preenchendo o formulário você verá todos nossas funcionalidades!",
       },
     ],
   },
@@ -54,7 +54,7 @@ const faqs = [
     perguntas: [
       {
         q: "Como funcionam as cobranças?",
-        a: "Recorrentes por boleto ou cartão.",
+        a: "Você tem um controle total do financeiro do seu empreendimento, desde a negociação até a geração do boleto do seu cliente!",
       },
     ],
   },

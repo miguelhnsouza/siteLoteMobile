@@ -7,32 +7,32 @@ export default function Comments() {
   // Lista de comentários
   const comments = [
     {
-      name: "Noah Carter",
-      role: "Food Critic",
+      name: "Riacho Doce Chacreamento",
+      role: "Loteamento",
       rating: 5,
-      text: "One of the best meals I’ve had! The flavors were amazing, and the staff was friendly. Highly recommend!",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      text: "O Lote Mobile revolucionou a gestão do meu empreendimento! A plataforma é completa e oferece todas as ferramentas necessárias para a gestão do meu empreendimento. Recomendo!!!",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLrZTZ2OxcnO7Sx693lkPfghS5ifj2GWi3vA&s",
     },
     {
-      name: "Mason Evans",
-      role: "Student",
-      rating: 3,
-      text: "Most of my favorite shows aren’t available, and the pricing is too high for what’s offered. Not satisfied.",
-      img: "https://randomuser.me/api/portraits/men/45.jpg",
-    },
-    {
-      name: "Ethan Russell",
-      role: "Freelancer",
-      rating: 2,
-      text: "Took days to get a response, and the agent didn’t provide a clear solution. Very frustrating experience.",
-      img: "https://randomuser.me/api/portraits/men/28.jpg",
-    },
-    {
-      name: "Jessica Harper",
-      role: "Fashion Blogger",
+      name: "Lucas Bahiana",
+      role: "Loteador",
       rating: 5,
-      text: "Fast delivery, great quality, and fantastic customer service. I will definitely shop here again!",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      text: "As ferramentas do sistema foram pensadas para a atividade de loteamento, tornando nossa operação mais ajustada, o que permitiu unificar os termos do mercado, de contrato e de gestão numa única plataforma.",
+      img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Silhueta-png-cinzento-300x284.png",
+    },
+    {
+      name: "Empreendimentos Reuter",
+      role: "Empresa",
+      rating: 5,
+      text: "Agradecemos a parceria extraordinária do Empreendimentos Reuter com a Lote. Percebemos que é inevitável a companhia de parceiros como vocês, que nos ajudam a enfrentar os desafios e dão sentido ao caminho que precisamos trilhar.",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyQIqCNpkokycIWJXXnI1mjPhLE8izcoMmzQ&s",
+    },
+    {
+      name: "Eder Junior",
+      role: "Loteador",
+      rating: 5,
+      text: "Estou extremamente satisfeito com o sistema de gestão de loteamentos oferecido por esta empresa. A facilidade de uso e a eficiência do software são impressionantes. Ele simplificou completamente nossas operações.",
+      img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Silhueta-png-cinzento-300x284.png",
     },
   ];
 

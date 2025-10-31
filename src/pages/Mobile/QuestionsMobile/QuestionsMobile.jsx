@@ -4,7 +4,7 @@ import "./questionsMobile.css";
 const faqsMobile = [
   {
     categoria: "Sobre o sistema",
-    slug: "sobre-mobile",
+    slug: "sobre",
     perguntas: [
       {
         q: "Como o sistema ajuda na gestão de vendas?",
@@ -12,49 +12,49 @@ const faqsMobile = [
       },
       {
         q: "O sistema é online?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        a: "Sim!",
       },
       {
         q: "O sistema pode ser usado em projetos novos ou em andamento?",
-        a: "Sim! Pode ser utilizado em ambos os tipos de projetos.",
+        a: "Sim! Você pode utilizar a Lote Mobile em qualquer momento da trajetória do seu empreendimento",
       },
       {
         q: "Posso acompanhar o desempenho da minha equipe de vendas?",
-        a: "Sim! Há dashboards e relatórios de performance.",
+        a: "Sim! Você consegue acompanhar através módulos e relatórios especiais para ter o controle da sua equipe em suas mãos!",
       },
       {
-        q: "A Lote Mobile possui aplicativo?",
-        a: "Sim! Totalmente baseado em nuvem.",
+        q: "A Lote Mobile possui aplicativo?",
+        a: "Sim! Temos aplicativo para todos os usuários do sistema!",
       },
     ],
   },
   {
     categoria: "Implementação e Suporte",
-    slug: "suporte-mobile",
+    slug: "suporte",
     perguntas: [
       {
         q: "Vocês oferecem treinamento?",
-        a: "Sim, acompanhamos o cliente durante a implantação.",
+        a: "Sim. Durante a implementação, fornecemos treinamentos completos e suporte dedicado para garantir o melhor aproveitamento do sistema. Sempre que surgirem dúvidas, nossa equipe estará pronta para ajudar.",
       },
     ],
   },
   {
     categoria: "Planos",
-    slug: "planos-mobile",
+    slug: "planos",
     perguntas: [
       {
         q: "Quais os planos disponíveis?",
-        a: "Mensal e anual com benefícios escaláveis.",
+        a: "Temos diversos planos e disponibilizamos também contratação de módulos especiais! Preenchendo o formulário você verá todos nossas funcionalidades!",
       },
     ],
   },
   {
-    categoria: "Financeiro",
-    slug: "financeiro-mobile",
+    categoria: "Financeiros e Cobranças",
+    slug: "financeiro",
     perguntas: [
       {
         q: "Como funcionam as cobranças?",
-        a: "Recorrentes por boleto ou cartão.",
+        a: "Você tem um controle total do financeiro do seu empreendimento, desde a negociação até a geração do boleto do seu cliente!",
       },
     ],
   },
