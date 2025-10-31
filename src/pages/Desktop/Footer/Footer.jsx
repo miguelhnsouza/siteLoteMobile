@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import logoLote2 from "../../../assets/images/logoLoteBranco.png";
+import { trackInstagramClick } from "../../../services/meta/metaConversion";
 
 export default function Footer() {
   return (
@@ -31,7 +32,7 @@ export default function Footer() {
             </p>
 
             <div className="d-flex gap-3 mt-3 fs-4">
-              <a href="#" className="text-light"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/lotemobile/" className="text-light" onClick={() => trackInstagramClick()}><i className="bi bi-instagram"></i></a>
               <a href="#" className="text-light"><i className="bi bi-linkedin"></i></a>
               <a href="#" className="text-light"><i className="bi bi-x"></i></a>
               <a href="#" className="text-light"><i className="bi bi-facebook"></i></a>

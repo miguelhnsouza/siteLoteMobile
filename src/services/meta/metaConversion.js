@@ -28,7 +28,7 @@ export function setMetaCredentials(token, id) {
 }
 
 // Função para hash SHA-256nfiguração da API de Conversão da Meta
-const META_ACCESS_TOKEN = 'SEU_ACCESS_TOKEN_AQUI'; // Substitua pelo seu token
+const META_ACCESS_TOKEN = '2256233544814402'; // Substitua pelo seu token
 const PIXEL_ID = '784590180660067';
 
 // Função para hash SHA-256
@@ -87,7 +87,8 @@ export async function sendMetaConversion(eventName, userData = {}, customData = 
         };
         
         const payload = {
-            data: [eventData]
+            data: [eventData],
+            test_event_code: "TEST61875"
         };
         
         if (!metaAccessToken || !pixelId) {
@@ -131,7 +132,7 @@ export async function trackLead(source, userData = {}) {
         ct: userData.cidade ? await hashSHA256(userData.cidade) : undefined,
         st: userData.estado ? await hashSHA256(userData.estado) : undefined,
         zp: userData.cep ? await hashSHA256(userData.cep.replace(/\D/g, "")) : undefined,
-        country: 'br' // Código do país (não precisa de hash)
+        country: await hashSHA256('br') // Código do país hasheado
     };
     
     await sendMetaConversion('Lead', hashedUserData, {
@@ -241,4 +242,25 @@ export async function track50PercentScroll(userData = {}) {
         scroll_depth: 50
     });
     console.log('Evento de 50% scroll enviado com sucesso');
+}
+
+// Função para rastrear scroll de 90%
+export async function track90PercentScroll(userData = {}) {
+    console.log('Iniciando track90PercentScroll');
+    if (typeof window !== 'undefined' && window.fbq) {
+        console.log('Enviando evento para fbq (Pixel)');
+        window.fbq('trackCustom', 'Scroll90Percent', {
+            content_category: 'Engagement',
+            content_name: '90% Page Scroll'
+        });
+    }
+    
+    console.log('Enviando evento para Conversion API');
+    await sendMetaConversion('Scroll90Percent', userData, {
+        content_category: 'Engagement',
+        content_name: '90% Page Scroll',
+        engagement_type: 'scroll',
+        scroll_depth: 90
+    });
+    console.log('Evento de 90% scroll enviado com sucesso');
 }

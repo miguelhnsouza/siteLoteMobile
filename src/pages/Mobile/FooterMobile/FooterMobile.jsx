@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./footerMobile.css";
 import logoLote2 from "../../../assets/images/logoLoteBranco.png";
+import { trackInstagramClick } from "../../../services/meta/metaConversion";
 
 export default function FooterMobile() {
   return (
@@ -150,7 +151,7 @@ export default function FooterMobile() {
             </ul>
           </div>
         <div className="col-md-2 w-auto d-flex flex-column justify-content-center gap-3 mt-3 fs-4">
-          <a href="https://www.instagram.com/lotemobile/" className="text-light">
+          <a href="https://www.instagram.com/lotemobile/" className="text-light" onClick={() => trackInstagramClick()}>
             <i className="bi bi-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/lotemobileoficial/" className="text-light">

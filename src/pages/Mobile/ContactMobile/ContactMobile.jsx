@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaWhatsapp, FaEnvelope, FaLocationDot} from "react-icons/fa6";
+import { trackWhatsAppClick } from "../../../services/meta/metaConversion";
 
 export default function ContactMobile() {
   return (
@@ -23,14 +24,19 @@ export default function ContactMobile() {
         <div className="container w-75 d-flex flex-column align-items-center gap-4">
           <div className="row w-100 justify-content-center text-start text-dark mb-3 ">
             {/* WhatsApp */}
-            <div className="col-12 col-md-4 d-flex flex-column align-items-start mb-4 mb-md-0">
+            <a 
+              href="https://wa.me/551699637972" 
+              target="_blank" 
+              className="col-12 col-md-4 d-flex flex-column align-items-start mb-4 mb-md-0 text-decoration-none text-dark"
+              onClick={() => trackWhatsAppClick()}
+            >
               <FaWhatsapp size={20} color="#007bff" className="mb-2" />
               <h6 className="fw-bold mb-0">WhatsApp</h6>
               <small className="fs-6 text-secondary mb-1">
                 Precisa de uma ajuda agora?
               </small>
               <p className="fw-semibold mb-0">(16) 9.9963-7972</p>
-            </div>
+            </a>
 
             {/* Email */}
             <div className="col-12 col-md-4 d-flex flex-column align-items-end text-center mb-4 mb-md-0">
