@@ -3,10 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./banner.css";
 import videoBanner1 from "../../../assets/images/videoBanner1.mp4";
+import logoOutlineLote from "../../../assets/images/outline.svg";
 
 export default function Hero() {
   return (
-    <section className="banner vh-100 overflow-hidden position-relative" id="hero">
+    <section
+      className="banner vh-100 overflow-hidden position-relative"
+      id="hero"
+    >
       <div
         id="bannerCarousel"
         className="carousel slide carousel-vertical h-100"
@@ -65,6 +69,9 @@ export default function Hero() {
               <p className="lead mt-3">
                 Gestão simples, visual moderna e tudo na palma da sua mão.
               </p>
+            </div>
+            <div className="banner-img">
+              <img src={logoOutlineLote} alt="Banner" />
             </div>
           </div>
         </div>

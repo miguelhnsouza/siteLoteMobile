@@ -74,6 +74,17 @@
   z-index: 3;
 }
 
+.banner-img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  color: #fff;
+  z-index: 2;
+  scale: calc(2);
+  transform: translateY(52%) translateX(25%);
+}
 .vertical-indicators button {
   width: 100%;
   width: 12px;

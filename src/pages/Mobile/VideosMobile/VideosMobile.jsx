@@ -39,7 +39,7 @@ export default function VideosMobile() {
               }}
             >
               <a
-                href="https://www.youtube.com/watch?v=XXXXXXX" // 👉 substitua pelo link do seu vídeo
+                href="https://www.instagram.com/reel/DPykGvdjb3F/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="play-icon-mobile-link text-decoration-none"
@@ -71,7 +71,7 @@ export default function VideosMobile() {
               }}
             >
               <a
-                href="https://www.instagram.com/reel/XXXXXXXX" // 👉 substitua pelo link do Reels
+                href="https://www.instagram.com/reel/DO561HujYHD/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="play-icon-mobile-link text-decoration-none"

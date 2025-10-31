@@ -31,7 +31,12 @@
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, all 0.3s ease;
+}
+
+.btn-agende2:disabled {
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .form-container{

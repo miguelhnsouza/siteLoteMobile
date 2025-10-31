@@ -45,7 +45,7 @@ export default function Contact() {
               <small className="text-secondary mb-1">
                 Tem alguma dúvida?
               </small>
-              <p className="fw-semibold mb-0">contato@ib3system.com.br</p>
+              <p className="fw-semibold mb-0">vendas@ibsystem.com.br</p>
             </div>
 
             {/* Local */}
