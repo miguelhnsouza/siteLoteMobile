@@ -1,5 +1,5 @@
 .section-videos {
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   display: flex;
   align-items: center;

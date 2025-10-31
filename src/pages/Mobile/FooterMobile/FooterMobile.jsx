@@ -46,7 +46,7 @@ export default function FooterMobile() {
             >
               <li>
                 <a
-                  href="#"
+                  href="#header"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -55,7 +55,7 @@ export default function FooterMobile() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#videos"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -64,7 +64,7 @@ export default function FooterMobile() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#integrations"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -73,7 +73,7 @@ export default function FooterMobile() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#questions"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -82,7 +82,7 @@ export default function FooterMobile() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#comments"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -91,7 +91,7 @@ export default function FooterMobile() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact"
                   className="text-decoration-none"
                   style={{ color: "#767185ff" }}
                 >
@@ -150,16 +150,16 @@ export default function FooterMobile() {
             </ul>
           </div>
         <div className="col-md-2 w-auto d-flex flex-column justify-content-center gap-3 mt-3 fs-4">
-          <a href="#" className="text-light">
+          <a href="https://www.instagram.com/lotemobile/" className="text-light">
             <i className="bi bi-instagram"></i>
           </a>
-          <a href="#" className="text-light">
+          <a href="https://www.linkedin.com/company/lotemobileoficial/" className="text-light">
             <i className="bi bi-linkedin"></i>
           </a>
-          <a href="#" className="text-light">
-            <i className="bi bi-x"></i>
+          <a href="https://www.youtube.com/@lotemobile" className="text-light">
+            <i className="bi bi-youtube"></i>
           </a>
-          <a href="#" className="text-light">
+          <a href="https://www.facebook.com/LoteMobile" className="text-light">
             <i className="bi bi-facebook"></i>
           </a>
         </div>

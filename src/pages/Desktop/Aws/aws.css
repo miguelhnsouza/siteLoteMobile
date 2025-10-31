@@ -1,6 +1,6 @@
 .aws-section {
   position: relative;
-  height: 50vh;
+  height: auto;
   background: url("../../../assets/images/Banner.4.jpg") no-repeat center center;
   background-size: cover;
   color: #fff;
