@@ -43,12 +43,12 @@ export default function Footer() {
           <div className="col-md-2 w-auto">
             <h6 className="fw-bold fs-3 mb-3">Links Úteis</h6>
             <ul className="list-unstyled fs-6 mt-5 gap-3 d-flex flex-column">
-              <li><a href="#" className="text-light text-decoration-none">Início</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Funcionalidades</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Integrações</a></li>
-              <li><a href="#" className="text-light text-decoration-none">FAQ</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Depoimentos</a></li>
-              <li><a href="#" className="text-light text-decoration-none">Contatos</a></li>
+              <li><a href="#header" className="text-light text-decoration-none">Início</a></li>
+              <li><a href="#videos" className="text-light text-decoration-none">Funcionalidades</a></li>
+              <li><a href="#integrations" className="text-light text-decoration-none">Integrações</a></li>
+              <li><a href="#questions" className="text-light text-decoration-none">FAQ</a></li>
+              <li><a href="#comments" className="text-light text-decoration-none">Depoimentos</a></li>
+              <li><a href="#contact" className="text-light text-decoration-none">Contatos</a></li>
             </ul>
           </div>
 

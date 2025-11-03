@@ -101,7 +101,7 @@ export default function Integrations() {
                           alt={item.title}
                           className="rounded-2"
                         />
-                        <span className="fs-3">{item.title}</span>
+                        <span className="fs-3 lh-1">{item.title}</span>
                       </div>
                       <span className="d-flex align-items-center">
                         {open === item.id ? "×" : "+"}
@@ -109,7 +109,7 @@ export default function Integrations() {
                     </div>
 
                     {open === item.id && (
-                      <p className="accordion-text fs-6">{item.text}</p>
+                      <p className="accordion-text fs-6 lh-3">{item.text}</p>
                     )}
                   </div>
                 ))}
