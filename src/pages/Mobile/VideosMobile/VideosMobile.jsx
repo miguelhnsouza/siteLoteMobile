@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./videoMobile.css";
 
-import mapaThumb from "../../../assets/images/mapa-interativo.png";
+import mapaThumb from "../../../assets/images/mapa-interativo.jpg";
 import crmThumb from "../../../assets/images/imagem-crm.png";
 
 export default function VideosMobile() {
