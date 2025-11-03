@@ -10,7 +10,7 @@ export default function SEOHead({
   children
 }) {
   useSEO({
-    title: title || 'Lote Mobile - Sistema de Gestão Imobiliária Completo',
+    title: title || 'Lote Mobile - Sistema de Gestão para Loteamentos',
     description: description || 'Revolucione a gestão do seu loteamento com o Lote Mobile. Sistema completo para imobiliárias com CRM, marketing digital e gestão financeira integrada.',
     keywords: keywords || 'loteamento, imobiliária, CRM, gestão imobiliária, sistema loteamento, marketing digital imobiliário, gestão financeira imóveis',
     image: image || 'https://lotemobile.com.br/src/assets/images/lote_og_image.png',

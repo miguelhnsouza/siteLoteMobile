@@ -17,7 +17,7 @@ export default function ExemploSEO() {
     "about": {
       "@type": "Organization",
       "name": "Lote Mobile",
-      "description": "Sistema de gestão imobiliária completo"
+      "description": "Sistema de gestão para Loteamentos"
     }
   };
 

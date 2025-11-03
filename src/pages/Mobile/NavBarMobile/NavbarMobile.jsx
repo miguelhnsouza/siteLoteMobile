@@ -17,12 +17,11 @@ export default function NavbarMobile() {
   return (
     <header className={`navbar-header ${scrolled ? "scrolled" : ""} py-3 px-4`}>
       <nav className="navbar navbar-expand-lg navbar-light container">
-        {/* LOGO */}
+
         <a className="navbar-brand d-flex align-items-center" href="#">
           <img src={logoLote} alt="Lotemobile" height="45" className="me-2" />
         </a>
 
-        {/* TOGGLER */}
         <button
           className="navbar-toggler"
           type="button"
@@ -35,7 +34,6 @@ export default function NavbarMobile() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* MENU */}
         <div
           className="collapse navbar-collapse justify-content-center"
           id="navbarNav"
@@ -79,7 +77,7 @@ export default function NavbarMobile() {
           </ul>
         </div>
 
-        {/* BOTÕES À DIREITA */}
+        {/* BOTÕES */}
         <div className="d-none d-lg-flex align-items-center ms-3 gap-2">
           <a href="#" className="btn btn-primary px-4 py-1 rounded-pill">
             Login

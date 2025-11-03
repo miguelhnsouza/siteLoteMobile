@@ -5,7 +5,7 @@ Este documento explica todas as implementações de SEO (Search Engine Optimizat
 ## 🎯 Implementações Realizadas
 
 ### 1. Meta Tags Básicas (index.html)
-- **Title**: "Lote Mobile - Sistema de Gestão Imobiliária Completo"
+- **Title**: "Lote Mobile - Sistema de Gestão para Loteamentos"
 - **Description**: Descrição otimizada com palavras-chave principais
 - **Keywords**: Lista de palavras-chave relevantes
 - **Author**: IB3 System
