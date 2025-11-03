@@ -147,8 +147,7 @@ export async function sendMetaConversion(eventName, userData = {}, customData = 
         };
         
         const payload = {
-            data: [eventData],
-            test_event_code: "TEST61875"
+            data: [eventData]
         };
         
         if (!metaAccessToken || !pixelId) {

@@ -46,7 +46,7 @@ function App() {
     if (!hasTrackedPageView.current) {
       captureUTMParameters();
       
-      setMetaCredentials('EAAJipMExBEYBPwd3635xakIID1gPv8bPEvHLGkcx5HB1jDtO9nE8SIdbOaChcMPs7v56ZCMlhpKPh6xaAk6cVCNIvfPJzQrhttm6MF3ZBod69XmONnPd99ZAASvpqns9nIDZCCqjLl8PgPbHa21b8YW8ro7w71UMD5DT7yZAhx4rfdZBUgZAJGpsWZAebys5N8qqIgZDZD', '2256233544814402');
+      setMetaCredentials('EAALsQWbZCId0BPZC9qfDNtfZBomAZBIZBeZCj98xrrWCWVjOog8fZCqWe5Cnosa3Jq46KR32IwwZAPu3DlGjSN7voAxT6HNqd0a2Jj6vJfCCUnDOJYjO8JKVEayZAuYh8QlrWG9HcLVDziAF4ffjeEVCSS0mQ7ZAhfCV03Q0sw6usHl5talZBQkFwanFOze2Gug08e2aAZDZD', '2703375596599994');
       
       trackPageView();
       hasTrackedPageView.current = true;
