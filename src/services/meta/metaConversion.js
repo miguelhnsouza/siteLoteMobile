@@ -1,8 +1,67 @@
-// Configuração da API de Conversão da Meta
 let metaAccessToken = null;
 let pixelId = null;
 
-// Função para configurar as credenciais da Meta
+export function captureUTMParameters() {
+    if (typeof window === 'undefined') return {};
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmParams = {};
+
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+
+    utmKeys.forEach(key => {
+        const value = urlParams.get(key);
+        if (value) {
+            utmParams[key] = value;
+        }
+    });
+
+    if (Object.keys(utmParams).length > 0) {
+        localStorage.setItem('utm_parameters', JSON.stringify(utmParams));
+        console.log('UTM parameters capturados e armazenados:', utmParams);
+    }
+
+    return utmParams;
+}
+
+export function getStoredUTMParameters() {
+    if (typeof window === 'undefined') return {};
+    
+    try {
+        const stored = localStorage.getItem('utm_parameters');
+        return stored ? JSON.parse(stored) : {};
+    } catch (error) {
+        console.error('Erro ao recuperar UTM parameters:', error);
+        return {};
+    }
+}
+
+export function clearUTMParameters() {
+    if (typeof window !== 'undefined') {
+        localStorage.removeItem('utm_parameters');
+        console.log('UTM parameters limpos');
+    }
+}
+
+export function addUTMToUrl(baseUrl, utmParams = null) {
+    if (!utmParams) {
+        utmParams = getStoredUTMParameters();
+    }
+    
+    if (Object.keys(utmParams).length === 0) {
+        return baseUrl;
+    }
+    
+    const url = new URL(baseUrl);
+    Object.entries(utmParams).forEach(([key, value]) => {
+        if (!url.searchParams.has(key)) {
+            url.searchParams.set(key, value);
+        }
+    });
+    
+    return url.toString();
+}
+
 export function setMetaCredentials(token, id) {
     console.log('Recebendo credenciais:', {
         token: token ? token.substring(0, 10) + '...' : 'ausente',
@@ -27,14 +86,11 @@ export function setMetaCredentials(token, id) {
     return true;
 }
 
-// Função para hash SHA-256nfiguração da API de Conversão da Meta
-const META_ACCESS_TOKEN = '2256233544814402'; // Substitua pelo seu token
+const META_ACCESS_TOKEN = '2256233544814402';
 const PIXEL_ID = '784590180660067';
 
-// Função para hash SHA-256
 async function hashSHA256(text) {
     if (!text) return undefined;
-    // Normaliza o texto: remove espaços, converte para minúsculas
     const normalizedText = text.trim().toLowerCase();
     const encoder = new TextEncoder();
     const data = encoder.encode(normalizedText);
@@ -42,7 +98,6 @@ async function hashSHA256(text) {
     return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-// Função para obter IP do usuário
 async function getUserIP() {
     try {
         const response = await fetch('https://api.ipify.org?format=json');
@@ -54,7 +109,6 @@ async function getUserIP() {
     }
 }
 
-// Função principal para enviar eventos para a Conversion API
 export async function sendMetaConversion(eventName, userData = {}, customData = {}) {
     try {
         console.log('Estado atual das credenciais:', {
@@ -73,6 +127,12 @@ export async function sendMetaConversion(eventName, userData = {}, customData = 
         
         const ip = await getUserIP();
         
+        const utmParams = getStoredUTMParameters();
+        const enhancedCustomData = {
+            ...customData,
+            ...utmParams
+        };
+        
         const eventData = {
             event_name: eventName,
             event_time: Math.floor(Date.now() / 1000),
@@ -83,7 +143,7 @@ export async function sendMetaConversion(eventName, userData = {}, customData = 
                 client_user_agent: navigator.userAgent,
                 ...userData
             },
-            custom_data: customData
+            custom_data: enhancedCustomData
         };
         
         const payload = {
@@ -111,9 +171,7 @@ export async function sendMetaConversion(eventName, userData = {}, customData = 
     }
 }
 
-// Função para rastrear leads
 export async function trackLead(source, userData = {}) {
-    // Envia tanto para o Pixel quanto para a Conversion API
     if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('track', 'Lead', {
             content_name: `Lead - ${source}`,
@@ -123,7 +181,6 @@ export async function trackLead(source, userData = {}) {
         });
     }
     
-    // Prepara os dados do usuário com hash
     const hashedUserData = {
         em: userData.email ? await hashSHA256(userData.email) : undefined,
         ph: userData.telefone ? await hashSHA256(userData.telefone.replace(/\D/g, "")) : undefined,
@@ -132,7 +189,7 @@ export async function trackLead(source, userData = {}) {
         ct: userData.cidade ? await hashSHA256(userData.cidade) : undefined,
         st: userData.estado ? await hashSHA256(userData.estado) : undefined,
         zp: userData.cep ? await hashSHA256(userData.cep.replace(/\D/g, "")) : undefined,
-        country: await hashSHA256('br') // Código do país hasheado
+        country: await hashSHA256('br')
     };
     
     await sendMetaConversion('Lead', hashedUserData, {
@@ -142,7 +199,6 @@ export async function trackLead(source, userData = {}) {
     });
 }
 
-// Função para rastrear visualização de página
 export async function trackPageView(userData = {}) {
     console.log('Iniciando trackPageView');
     if (typeof window !== 'undefined' && window.fbq) {
@@ -159,7 +215,6 @@ export async function trackPageView(userData = {}) {
     console.log('Evento PageView enviado com sucesso');
 }
 
-// Função para rastrear visualização de conteúdo
 export async function trackViewContent(contentName, userData = {}) {
     if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('track', 'ViewContent', {
@@ -174,7 +229,6 @@ export async function trackViewContent(contentName, userData = {}) {
     });
 }
 
-// Função para rastrear cliques no Instagram
 export async function trackInstagramClick(userData = {}) {
     if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('trackCustom', 'InstagramClick', {
@@ -189,8 +243,6 @@ export async function trackInstagramClick(userData = {}) {
         click_type: 'social_media'
     });
 }
-
-// Função para rastrear cliques no WhatsApp
 export async function trackWhatsAppClick(userData = {}) {
     if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('trackCustom', 'WhatsAppClick', {
@@ -206,7 +258,6 @@ export async function trackWhatsAppClick(userData = {}) {
     });
 }
 
-// Função para rastrear tempo na página (30 segundos)
 export async function track30SecondsOnPage(userData = {}) {
     if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('trackCustom', 'TimeOnPage30s', {
@@ -223,7 +274,6 @@ export async function track30SecondsOnPage(userData = {}) {
     });
 }
 
-// Função para rastrear scroll de 50%
 export async function track50PercentScroll(userData = {}) {
     console.log('Iniciando track50PercentScroll');
     if (typeof window !== 'undefined' && window.fbq) {
@@ -244,7 +294,6 @@ export async function track50PercentScroll(userData = {}) {
     console.log('Evento de 50% scroll enviado com sucesso');
 }
 
-// Função para rastrear scroll de 90%
 export async function track90PercentScroll(userData = {}) {
     console.log('Iniciando track90PercentScroll');
     if (typeof window !== 'undefined' && window.fbq) {

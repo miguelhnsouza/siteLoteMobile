@@ -8,7 +8,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { trackInstagramClick, trackWhatsAppClick } from "../../../services/meta/metaConversion";
+import { trackInstagramClick, trackWhatsAppClick, addUTMToUrl } from "../../../services/meta/metaConversion";
 
 export default function Section4() {
   return (
@@ -44,7 +44,7 @@ export default function Section4() {
             <FaLinkedinIn />
           </a>
           <a
-            href="https://www.instagram.com/lotemobile/"
+            href={addUTMToUrl("https://www.instagram.com/lotemobile/")}
             className="icon"
             target="_blank"
             onClick={() => trackInstagramClick()}
@@ -52,7 +52,7 @@ export default function Section4() {
             <FaInstagram />
           </a>
           <a
-            href="https://wa.me/551699637972"
+            href={addUTMToUrl("https://wa.me/551699637972")}
             className="icon"
             target="_blank"
             onClick={() => trackWhatsAppClick()}

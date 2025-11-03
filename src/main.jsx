@@ -2,10 +2,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import useIsDesktop from "./hooks/useIsDesktop";
+import { usePerformance } from "./hooks/useSEO";
 import "../style.css";
-import { setMetaCredentials, trackPageView, track30SecondsOnPage, track50PercentScroll, track90PercentScroll } from "./services/meta/metaConversion";
+import { setMetaCredentials, trackPageView, track30SecondsOnPage, track50PercentScroll, track90PercentScroll, captureUTMParameters } from "./services/meta/metaConversion";
 
-// Desktop pages
 import Navbar from "./pages/Desktop/NavBar/Navbar";
 import Banner from "./pages/Desktop/Hero/Hero";
 import Videos from "./pages/Desktop/Videos/Videos";
@@ -19,8 +19,6 @@ import Comments from "./pages/Desktop/Comments/Comments";
 import Contact from "./pages/Desktop/Contact/Contact";
 import Footer from "./pages/Desktop/Footer/Footer";
 
-// Mobile pages
-// import NavbarMob from "./pages/Mobile/NavBar/NavbarMob";
 import HeroMobile from "./pages/Mobile/HeroMobile/HeroMobile";
 import VideosMobile from "./pages/Mobile/VideosMobile/VideosMobile";
 import CrmMobile from "./pages/Mobile/CrmMobile/CrmMobile";
@@ -42,17 +40,18 @@ function App() {
   const hasTracked50PercentScroll = React.useRef(false);
   const hasTracked90PercentScroll = React.useRef(false);
 
+  usePerformance();
+
   React.useEffect(() => {
     if (!hasTrackedPageView.current) {
-      // Configurar credenciais da Meta (substitua pelos valores reais)
+      captureUTMParameters();
+      
       setMetaCredentials('EAAJipMExBEYBPwd3635xakIID1gPv8bPEvHLGkcx5HB1jDtO9nE8SIdbOaChcMPs7v56ZCMlhpKPh6xaAk6cVCNIvfPJzQrhttm6MF3ZBod69XmONnPd99ZAASvpqns9nIDZCCqjLl8PgPbHa21b8YW8ro7w71UMD5DT7yZAhx4rfdZBUgZAJGpsWZAebys5N8qqIgZDZD', '2256233544814402');
       
-      // Rastrear visualização de página
       trackPageView();
       hasTrackedPageView.current = true;
     }
 
-    // Rastrear 30 segundos na página
     const timer30s = setTimeout(() => {
       if (!hasTracked30Seconds.current) {
         track30SecondsOnPage();
@@ -60,7 +59,6 @@ function App() {
       }
     }, 30000);
 
-    // Rastrear scroll de 50% e 90%
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
@@ -90,7 +88,6 @@ function App() {
   return (
     <>
       {isDesktop ? (
-        // --- 💻 Versão Desktop ---
         <>
           <Navbar />
           <Banner />
@@ -106,7 +103,6 @@ function App() {
           <Footer />
         </>
       ) : (
-        // --- 📱 Versão Mobile ---
         <>
           <NavbarMobile />
           <HeroMobile />

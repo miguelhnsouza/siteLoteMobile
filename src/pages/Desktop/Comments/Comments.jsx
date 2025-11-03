@@ -4,7 +4,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 export default function Comments() {
-  // Lista de comentários
   const comments = [
     {
       name: "Riacho Doce Chacreamento",

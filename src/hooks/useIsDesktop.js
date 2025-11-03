@@ -1,4 +1,3 @@
-// src/hooks/useIsDesktop.js
 import { useState, useEffect } from "react";
 
 export default function useIsDesktop() {

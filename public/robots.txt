@@ -1,0 +1,22 @@
+# Robots.txt para Lote Mobile
+
+User-agent: *
+Allow: /
+
+# Bloquear acesso a arquivos sensíveis
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.log$
+
+# Permitir acesso aos assets públicos
+Allow: /src/assets/
+Allow: /src/assets/images/
+Allow: /src/assets/fonts/
+
+# Sitemap
+Sitemap: https://lotemobile.com.br/sitemap.xml
+
+# Crawl delay (opcional)
+Crawl-delay: 1

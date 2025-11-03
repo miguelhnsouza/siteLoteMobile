@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaWhatsapp, FaEnvelope, FaLocationDot} from "react-icons/fa6";
-import { trackWhatsAppClick } from "../../../services/meta/metaConversion";
+import { trackWhatsAppClick, addUTMToUrl } from "../../../services/meta/metaConversion";
 
 export default function Contact() {
   return (
@@ -25,7 +25,7 @@ export default function Contact() {
           <div className="row w-100 justify-content-center text-start text-dark mb-3 ">
             {/* WhatsApp */}
             <a 
-              href="https://wa.me/551699637972" 
+              href={addUTMToUrl("https://wa.me/551699637972")} 
               target="_blank" 
               className="col-12 col-md-4 d-flex flex-column align-items-center text-center mb-4 mb-md-0 text-decoration-none text-dark"
               onClick={() => trackWhatsAppClick()}

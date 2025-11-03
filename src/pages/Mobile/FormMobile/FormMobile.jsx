@@ -1,28 +1,26 @@
 import React, { useState } from "react";
 import "./formMobile.css";
 import { FaUser, FaEnvelope, FaWhatsapp, FaClock } from "react-icons/fa";
-import { trackLead } from "../../../services/meta/metaConversion";
+import { trackLead, getStoredUTMParameters } from "../../../services/meta/metaConversion";
 
 export default function FormMobile() {
   const [enviado, setEnviado] = useState(false);
 
-  // Máscara de telefone (WhatsApp)
   const maskPhone = (value) => {
     if (!value) return "";
-    value = value.replace(/\D/g, ""); // remove tudo que não é número
+    value = value.replace(/\D/g, "");
     value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
     value = value.replace(/(\d{5})(\d)/, "$1-$2");
-    return value.substring(0, 15); // limita o tamanho
+    return value.substring(0, 15);
   };
 
-  // Máscara de horário (HH:MM)
   const maskTime = (value) => {
     if (!value) return "";
-    value = value.replace(/\D/g, ""); // só números
+    value = value.replace(/\D/g, "");
     if (value.length >= 3) {
       value = value.replace(/(\d{2})(\d)/, "$1:$2");
     }
-    return value.substring(0, 5); // limita a 5 caracteres
+    return value.substring(0, 5);
   };
 
   const [formData, setFormData] = useState({
@@ -50,10 +48,10 @@ export default function FormMobile() {
     }
 
     try {
-      // --- 1️⃣ Meta Pixel (conversão)
-      await trackLead("Formulário Desktop", formData);
+      const utmParams = getStoredUTMParameters();
 
-      // --- 2️⃣ API principal (Wallet Lote)
+      await trackLead("Formulário Mobile", formData);
+
       const mainResponse = await fetch(
         "https://backend.walletlote.app.br/api/landingPage/lead",
         {
@@ -66,6 +64,13 @@ export default function FormMobile() {
             name: nome,
             email: email || "",
             phone: telefone.startsWith("55") ? telefone : "55" + telefone,
+            utm_source: utmParams.utm_source || null,
+            utm_medium: utmParams.utm_medium || null,
+            utm_campaign: utmParams.utm_campaign || null,
+            utm_term: utmParams.utm_term || null,
+            utm_content: utmParams.utm_content || null,
+            gclid: utmParams.gclid || null,
+            fbclid: utmParams.fbclid || null,
           }),
         }
       );
@@ -76,7 +81,6 @@ export default function FormMobile() {
         return;
       }
 
-      // --- 3️⃣ Envio paralelo: SheetMonkey
       const dataAtual = new Date().toLocaleDateString("pt-BR");
       const dadosSegundoDestino = {
         Data: dataAtual,
@@ -92,7 +96,6 @@ export default function FormMobile() {
         body: new URLSearchParams(dadosSegundoDestino),
       }).catch((err) => console.error("Erro SheetMonkey:", err));
 
-      // --- 4️⃣ Envio paralelo: Make (Integromat)
       const dadosTerceiroDestino = {
         Data: dataAtual,
         Nome: nome,
@@ -110,7 +113,6 @@ export default function FormMobile() {
       setEnviado(true);
       setTimeout(() => setEnviado(false), 3000);
 
-      // window.location.href = "https://lotemobile.com.br/typ.php";
     } catch (error) {
       console.error("Erro geral:", error);
       alert("Ocorreu um erro ao enviar o formulário. Tente novamente.");
